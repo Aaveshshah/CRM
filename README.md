@@ -31,8 +31,8 @@ All services interact with each other using **REST APIs**.
 
 | Method | Endpoint | Description |
 |:------|:---------|:------------|
-| POST | `/users` | Create a new user |
-| GET | `/users` | Get all users |
+| POST | `/users/save` | Create a new user |
+| GET | `/users/all` | Get all users |
 | GET | `/users/{userId}` | Get user by ID (also returns assigned leads) |
 | PUT | `/users/{userId}` | Update user details |
 | DELETE | `/users/{userId}` | Delete user (soft delete - deactivate user) |
@@ -45,8 +45,8 @@ All services interact with each other using **REST APIs**.
 
 | Method | Endpoint | Description |
 |:------|:---------|:------------|
-| POST | `/contacts` | Create a new contact |
-| GET | `/contacts` | Get all contacts |
+| POST | `/contacts/save` | Create a new contact |
+| GET | `/contacts/new` | Get all contacts |
 | GET | `/contacts/{contactId}` | Get contact by ID |
 | PUT | `/contacts/{contactId}` | Update contact details |
 | DELETE | `/contacts/{contactId}` | Delete contact |
@@ -58,8 +58,8 @@ All services interact with each other using **REST APIs**.
 
 | Method | Endpoint | Description |
 |:------|:---------|:------------|
-| POST | `/leads` | Create a new lead |
-| GET | `/leads` | Get all leads |
+| POST | `/leads/save` | Create a new lead |
+| GET | `/leads/all` | Get all leads |
 | GET | `/leads/{leadId}` | Get lead by ID |
 | GET | `/leads/user/{userId}` | Get leads assigned to a user |
 | PUT | `/leads/{leadId}` | Update lead details |
@@ -72,8 +72,8 @@ All services interact with each other using **REST APIs**.
 
 | Method | Endpoint | Description |
 |:------|:---------|:------------|
-| POST | `/sales` | Create a new sale |
-| GET | `/sales` | Get all sales |
+| POST | `/sales/save` | Create a new sale |
+| GET | `/sales/all` | Get all sales |
 | GET | `/sales/{saleId}` | Get sale by ID |
 | PUT | `/sales/{saleId}` | Update sale details |
 | DELETE | `/sales/{saleId}` | Delete sale |
@@ -85,8 +85,8 @@ All services interact with each other using **REST APIs**.
 
 | Method | Endpoint | Description |
 |:------|:---------|:------------|
-| POST | `/campaigns` | Create a new marketing campaign |
-| GET | `/campaigns` | Get all campaigns |
+| POST | `/campaigns/save` | Create a new marketing campaign |
+| GET | `/campaigns/all` | Get all campaigns |
 | GET | `/campaigns/{campaignId}` | Get campaign by ID |
 | PUT | `/campaigns/{campaignId}` | Update campaign details |
 | DELETE | `/campaigns/{campaignId}` | Delete campaign |
