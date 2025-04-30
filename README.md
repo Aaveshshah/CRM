@@ -10,6 +10,7 @@ The project mainly consists of the following services:
 - 🧲 Lead Management Service
 - 💰 Sales Management Service
 - 📢 Marketing Campaign Service
+- 🛠️ Support Ticket Service
 
 All services interact with each other using **REST APIs**.
 
@@ -93,10 +94,25 @@ All services interact with each other using **REST APIs**.
 
 ---
 
+### 6. 🛠️ Support Ticket Service  
+**Handles:** Customer support tickets raised for any issue or inquiry.
+
+| Method | Endpoint | Description |
+|:------|:---------|:------------|
+| POST  | `/tickets/save`         | Create a new support ticket |
+| GET   | `/tickets/all`          | Get all support tickets |
+| GET   | `/tickets/{ticketId}`   | Get support ticket by ID |
+| GET   | `/tickets/user/{userId}`| Get tickets submitted by a user |
+| PUT   | `/tickets/{ticketId}`   | Update ticket details or status |
+| DELETE| `/tickets/{ticketId}`   | Delete a support ticket |
+
+---
+
 ## 🔗 Communication Between Services
 - **User Service** ↔ **Lead Service** (fetch user's leads)
 - **Lead Service** ↔ **Contact Service** (lead linked with a contact)
 - **Lead Service** ↔ **Sales Service** (when lead is converted to sale)
+- **User Service** ↔ **Support Ticket Service** (manage tickets submitted by users)
 
 Communication between services is done using **Spring's RestTemplate**.
 
@@ -106,5 +122,3 @@ Communication between services is done using **Spring's RestTemplate**.
 - All services completed and tested successfully.
 - Database structure and sample data created.
 - Ready for further integration with frontend if required.
-
----
